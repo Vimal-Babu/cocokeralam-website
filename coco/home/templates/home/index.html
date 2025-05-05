@@ -1,0 +1,330 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}Mud crab, Coconut Product and White Sandalwood plants Exporter in Kerala, India{% endblock title %}
+
+{% block seo %}
+<meta name="description" content="Coco Keralam Exporter Virgin Coconut Oil for nourishing hair and skin, and Premium Cooking Oil for healthy, flavorful cooking, both crafted with the finest ingredients and rigorous quality control to ensure purity and effectiveness.">
+<meta name="keywords" content="Mud crab, Coconut Product, White Sandalwood plants, Premium Cooking Oil, Virgin Coconut Oil, Coconut, Coconut Product Exporter, Mud crab Exporter, Coco Keralam, Exporter, Supplier, Kerala, India">
+<meta name="author" content="Coco Keralam"/>
+<meta name="page-type" content="" />
+<meta name="language" content="en" />
+<meta name="Country" content="India " />
+<meta name="state" content="Kerala" />
+<meta name="viewport" content="width=700" />
+<meta name="googlebot" content="index,follow" />
+<meta property="og:url" content="https://cocokeralam.com/" />
+<meta name="Rating" content="General">
+<meta name="Robots" content="INDEX,FOLLOW">
+<meta name="Revisit-after" content="7 Days">
+<link rel="canonical" href="https://cocokeralam.com/">
+{% endblock seo %}
+
+
+{% block body %}
+<!-- Start Banner Area 
+    ============================================= -->
+    <div class="banner-area navigation-circle text-light banner-style-one zoom-effect overflow-hidden">
+        <!-- Slider main container -->
+        <div class="banner-fade">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide banner-style-one">
+                    <div class="banner-thumb bg-cover shadow dark" style="background: url({% static 'home/img/banner/3.jpg' %});">
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-center">
+                            <div class="col-xl-9">
+                                <div class="content">
+
+                                    <div class="info  pl-4">
+                                        <h2>Coconut & Coconut Oil</h2>
+                                        <p>increasing good cholesterol, controlling blood sugar, reducing stress</p>
+
+                                        <div class="button">
+                                            <a class="btn btn-theme btn-md radius animation" href="{% url 'aboutPage' %}">Discover More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-slide banner-style-one">
+                    <div class="banner-thumb bg-cover shadow dark" style="background: url({% static 'home/img/banner/4.jpg' %});">
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-center">
+                            <div class="col-xl-12 ">
+                                <div class="content">
+
+                                    <div class="info">
+                                        <h2>White Sandalwood plants</h2>
+                                        <p>Fresh vegetables are a healthy part of a diet because they contain many
+                                            essential nutrients, including vitamins, minerals, fiber, and antioxidants.
+                                        </p>
+                                        <div class="button">
+                                            <a class="btn btn-theme btn-md radius animation" href="{% url 'aboutPage' %}">Discover More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </div>
+    <!-- End Banner -->
+
+
+
+
+    <!-- Start About 
+    ============================================= -->
+    <div class="about-style-one-area default-padding overflow-hidden">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-6 col-lg-5">
+                    <div class="about-style-one-thumb">
+                        <img src="{% static 'home/img/about/1.jpg' %}" alt="Image Not Found">
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="about-style-one-info">
+
+                        <h2 class="title">Coco Keralam</h2>
+                        <p class="text-justify">
+                            Coco Keralam- We offer two premium products: Virgin Coconut Oil and Premium Cooking Oil.
+                            Virgin Coconut Oil is specially designed for hair and skin care, providing nourishment and
+                            moisturization. Our Premium Cooking oil is perfect for culinary purposes, ensuring a
+                            healthy, delicious cooking experience.
+                            <br><br>
+                            Our products are crafted with the finest ingredients, carefully selected and processed to
+                            maintain their natural goodness. We prioritize quality control ensuring that every product
+                            meets the highest standards of purity and effectiveness.
+                        </p>
+                        <a class="btn btn-theme btn-md radius animation" href="{% url 'aboutPage' %}">Discover More</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Gallery 
+    ============================================= -->
+    <div class="gallery-style-one-area default-padding">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="site-heading text-center">
+
+                        <h2 class="title">Our Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                {% for product in home_products %}
+                    <div class="col-md-3">
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ product.image.url }}" alt="{ product.name }}">
+                                <div class="overlay">
+                                    <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery  -->
+
+
+
+
+
+    <!-- Start Testimonial 
+    ============================================= -->
+    <div class="testimonial-style-two-area default-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h5 class="sub-title">Customers’ Review</h5>
+                        <h2 class="title">What people say?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="testimonial-style-two-carousel swiper text-center">
+                   
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-style-two">
+                                    <div class="item-info">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p>
+                                            “I’ve been using Coco Keralam Virgin Coconut Oil for a few months now, and my hair and skin have never felt better! The oil absorbs quickly and leaves my skin feeling soft without any greasy residue. My hair has become shinier and more manageable. It’s the perfect all-in-one solution for my beauty routine. Highly recommend it!”
+                                        </p>
+                                    </div>
+                                    <div class="provider">
+                                        <div class="thumb">
+                                            <img src="{% static 'home/img/farmers/1.jpg' %}" alt="Image Not Found">
+                                            <div class="quote">
+                                                <img src="{% static 'home/img/shape/quote.png' %}" alt="Image Not Found">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="content">
+                                                <h4>Jatin Gulati</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-style-two">
+                                    <div class="item-info">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p>
+                                            "I’ve switched to Coco Keralam Premium Cooking Oil for all my cooking, and I’m amazed by the difference in taste and quality. It has a clean, light flavor that really lets the ingredients shine. Plus, knowing it’s made with the highest standards of purity gives me peace of mind. It’s the best cooking oil I’ve ever used!”
+                                        </p>
+                                    </div>
+                                    <div class="provider">
+                                        <div class="thumb">
+                                            <img src="{% static 'home/img/farmers/1.jpg' %}" alt="Image Not Found">
+                                            <div class="quote">
+                                                <img src="{% static 'home/img/shape/quote.png' %}" alt="Image Not Found">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="content">
+                                                <h4>Atul Verma</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-style-two">
+                                    <div class="item-info">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p>
+                                            “Coco Keralam has completely transformed my kitchen and skincare routine. I use their Virgin Coconut Oil for everything—from body lotion to hair masks—and it’s been such a treat. The Premium Cooking Oil has made my meals healthier without compromising on flavor. I love knowing I’m using products that are both natural and effective!”
+                                        </p>
+                                    </div>
+                                    <div class="provider">
+                                        <div class="thumb">
+                                            <img src="{% static 'home/img/farmers/1.jpg' %}" alt="Image Not Found">
+                                            <div class="quote">
+                                                <img src="{% static 'home/img/shape/quote.png' %}" alt="Image Not Found">
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="content">
+                                                <h4>Neha Sharma</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonial -->
+
+
+
+    <!-- Start Choose Us Area
+    ============================================= -->
+    <div class="choose-us-style-one-area default-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="choose-us-thumb">
+                        <img src="{% static 'home/img/illustration/13.png' %}" alt="Image Not Found">
+                    </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-7">
+                    <div class="achivement-items">
+                        <ul class="list-details">
+                            <li>
+                                <h4>100% Natural Agro Products</h4>
+                                <p>
+                                    100% natural agro products refer to agricultural products that are grown or produced
+                                    using entirely natural methods, without the use of synthetic chemicals, genetically
+                                    modified organisms (GMOs), or artificial additives.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>Modern Equipment</h4>
+                                <p>
+                                    Modern equipment in agriculture has revolutionized the way farming is conducted,
+                                    increasing efficiency, productivity, and sustainability.
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Choose Us -->
+{% endblock body %}

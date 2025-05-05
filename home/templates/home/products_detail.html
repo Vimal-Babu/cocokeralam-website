@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}{{ product.meta_title }}{% endblock title %}
+
+{% block seo %}
+<meta name="description" content="{{ product.meta_description}}">
+<meta name="keywords" content="{{ product.meta_keywords}}">
+<meta name="author" content="Coco Keralam"/>
+{% endblock seo %}
+
+
+{% block body %}
+
+<!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light" style="background-image: url({% static 'home/img/banner/15.jpg' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Coconut</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="{% url 'indexPage' %}"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="active">Our Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Shop 
+    ============================================= -->
+    <div class="validtheme-shop-single-area default-padding">
+        <div class="container">
+            <div class="product-details">
+                <div class="row">
+
+                    <div class="col-lg-4">
+<img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="single-product-contents">
+                          
+                            <h2 class="product-title">
+                                {{ product.name }}
+                            </h2>
+
+                            <p>
+                            {{ product.discription }}
+
+                            </p>
+                            <div class="product-purchase-list">
+                                
+                                <a href="{% url 'contactPage' %}" class="btn secondary btn-theme btn-sm animation">
+                                Contact Now
+                                </a>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End Shop -->
+{% endblock body %}

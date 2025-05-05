@@ -1,0 +1,60 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Our Products{% endblock title %}
+
+{% block body %}
+
+<!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area text-center shadow dark-hard bg-cover text-light"
+        style="background-image: url({% static 'home/img/banner/15.jpg' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Our Products</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="{% url 'indexPage' %}"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="active">Our Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+<!-- Start Gallery 
+    ============================================= -->
+    <div class="gallery-style-one-area default-padding">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="site-heading text-center">
+                        <h2 class="title">Our Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-3">
+                        <div class="swiper-slide">
+                            <div class="gallery-style-one">
+                                <img src="{{ product.image.url }}" alt="{ product.name }}">
+                                <div class="overlay">
+                                    <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery  -->
+
+{% endblock body %}

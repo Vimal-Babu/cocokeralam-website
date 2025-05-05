@@ -1,0 +1,152 @@
+{% load static %}
+
+<a href="https://wa.link/5oanh4" id="whtBtn" target="_blank"><img src="{% static 'home/img/whatsapp.webp' %}" width="100%"
+    height="auto" alt="whatsapp"></a>
+
+
+<!-- Start Footer 
+============================================= -->
+<footer class="bg-dark text-light">
+<div class="container">
+    <div class="f-items default-padding">
+        <div class="row">
+
+            <!-- Single Itme -->
+            <div class="col-lg-4 col-md-6 item">
+                <div class="footer-item about">
+                    <h4 class="widget-title">About us</h4>
+
+                    <p>
+                    Coco Keralam- We offer two premium products: Virgin Coconut Oil and Premium Cooking Oil. Virgin Coconut Oil is specially designed for hair and skin care, providing nourishment and moisturization. Our Premium Cooking oil is perfect for culinary purposes, ensuring a healthy, delicious cooking experience.
+                    </p>
+                    <a onclick="window.open('https://www.worldmartexport.com/vtrust/coco-keralam/','name','width=800,height=600')"><img src="https://www.worldmartexport.com/static/home/img/icon/trust.png" style="height:50px;width:auto;"></a>
+                    <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_PuioeskDdoBnGO/view" data-text="Pay Now" data-color="#528FF0" data-size="large">
+<script>
+(function(){
+var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+rzp && rzp.init && rzp.init()}})();
+</script>
+</div>
+
+
+                </div>
+            </div>
+            <!-- End Single Itme -->
+
+            <!-- Single Itme -->
+            <div class="col-lg-2 col-md-6 item">
+                <div class="footer-item link">
+                    <h4 class="widget-title">Explore</h4>
+                    <ul>
+                        <li><a href="{% url 'indexPage' %}">Home</a></li>
+
+                        <li><a href="{% url 'aboutPage' %}">About Us</a></li>
+
+                        <li><a href="{% url 'contactPage' %}">Contact us</a></li>
+                        <li><a href="{% url 'productsPage' %}">Products</a></li>
+
+                 
+                    
+                     <li><a href="{% url 'termandconditionPage' %}">Terms and Condition</a></li>
+                    <li><a href="{% url 'cancellationandrefundPage' %}">Cancellation and Refund</a></li>
+                    <li><a href="{% url 'privacyandpolicyPage' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'shippinganddeliveryPage' %}">Shipping and Delivery Policy</a></li> 
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- End Single Itme -->
+
+            <!-- Single Itme -->
+            <div class="col-lg-2 col-md-6 item">
+                <div class="footer-item link">
+                    <h4 class="widget-title">Our Products</h4>
+                    <ul>
+                        {% for product in navproducts %}
+                            <li><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- End Single Itme -->
+
+            <!-- Single Itme -->
+            <div class="col-lg-4 col-md-6 item">
+                <div class="footer-item contact">
+                    <h4 class="widget-title">Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Address:</strong>
+                                Building 183/C, Arookutty PO Cherthala, Alapuzha, Aroor, Kerala, India - 688535
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Email:</strong>
+                                <a href="mailto:deepuaky123@gmail.com">deepuaky123@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="content">
+                                <strong>Phone:</strong>
+                                <a href="tel:+91-8089855403">+91-8089855403</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Single Itme -->
+
+        </div>
+    </div>
+    <!-- Start Footer Bottom -->
+    <div class="footer-bottom text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>&copy; Copyright 2024. All Rights Reserved by <a href="{% url 'indexPage' %}">Coco Keralam.
+                    </a>&nbsp Design and Developed by <a href="https://worldmartexport.com/"
+                        target="_blank">World Mart Export</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Bottom -->
+</div>
+<div class="shape-right-bottom">
+    <img src="{% static 'home/img/shape/7.png' %}" alt="Image Not Found">
+</div>
+</footer>
+<!-- End Footer -->
+
+<!-- jQuery Frameworks
+============================================= -->
+<script src="{% static 'home/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'home/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'home/js/jquery.appear.js' %}"></script>
+<script src="{% static 'home/js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'home/js/progress-bar.min.js' %}"></script>
+<script src="{% static 'home/js/circle-progress.js' %}"></script>
+<script src="{% static 'home/js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'home/js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'home/js/magnific-popup.min.js' %}"></script>
+<script src="{% static 'home/js/count-to.js' %}"></script>
+<script src="{% static 'home/js/jquery.scrolla.min.js' %}"></script>
+<script src="{% static 'home/js/ScrollOnReveal.js' %}"></script>
+<script src="{% static 'home/js/YTPlayer.min.js' %}"></script>
+<script src="{% static 'home/js/validnavs.js' %}"></script>
+<script src="{% static 'home/js/gsap.js' %}"></script>
+<script src="{% static 'home/js/ScrollTrigger.min.js' %}"></script>
+<script src="{% static 'home/js/SplitText.min.js' %}"></script>
+<script src="{% static 'home/js/main.js' %}"></script>
